@@ -1,0 +1,15 @@
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.csprojAssemblyReference.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.MillerLogBookForm.resources
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.Properties.Resources.resources
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.csproj.GenerateResource.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\LogBook.WinForms.exe.config
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\LogBook.WinForms.exe
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\LogBook.WinForms.pdb
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\LogBook.BusinessLayer.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\Dapper.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\LogBook.BusinessLayer.pdb
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\Dapper.xml
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.csproj.CopyComplete
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.exe
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.pdb

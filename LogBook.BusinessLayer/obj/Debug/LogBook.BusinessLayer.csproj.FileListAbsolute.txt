@@ -1,0 +1,11 @@
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\LogBook.BusinessLayer.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\LogBook.BusinessLayer.pdb
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\Dapper.Contrib.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\Dapper.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\Dapper.xml
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\Dapper.Contrib.xml
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csproj.CopyComplete
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.dll
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.pdb
