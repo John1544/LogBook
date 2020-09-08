@@ -23,13 +23,13 @@ namespace LogBook.BusinessLayer.Repositories
             Connection = new SqlConnection(connectString);
         }
 
-        public List<Person> Select()
+        public List<T> Select()
         {
             string sql = $"SELECT FirstName, LastName From {TableName}";
-            return Connection.Query<Person>(sql).ToList();
+            return Connection.Query<T>(sql).ToList();
         }
 
-        public int Insert(Person data)
+        public int Insert(T data)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace LogBook.BusinessLayer.Repositories
             }
         }
 
-        public int Update(Person data)
+        public int Update(T data)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace LogBook.BusinessLayer.Repositories
                 return -1;
             }
         }
-        public int Delete(Person data)
+        public int Delete(T data)
         {
             try
             {

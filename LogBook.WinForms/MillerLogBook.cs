@@ -15,8 +15,7 @@ namespace LogBook.WinForms
     public partial class MillerLogBookForm : Form
     {
         Person personModel = new Person();
-        SelectPersonService personService = new SelectPersonService();
-        InsertPersonService insertPersonService = new InsertPersonService();
+        PersonService personService = new PersonService();
         public MillerLogBookForm()
         {
             InitializeComponent();
@@ -28,7 +27,7 @@ namespace LogBook.WinForms
             personModel.LastName = TxtLastName.Text;
             try
             {
-                insertPersonService.PostPerson(personModel);
+                personService.PostPerson(personModel);
                 MessageBox.Show("Your data has been successfully saved.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)

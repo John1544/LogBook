@@ -58,10 +58,8 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\LogRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
-    <Compile Include="Service\DeletePersonService.cs" />
-    <Compile Include="Service\InsertPersonService.cs" />
-    <Compile Include="Service\SelectPersonService.cs" />
-    <Compile Include="Service\UpdatePersonService.cs" />
+    <Compile Include="Service\LogsService.cs" />
+    <Compile Include="Service\PersonService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">

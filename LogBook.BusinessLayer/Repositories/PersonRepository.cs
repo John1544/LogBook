@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using LogBook.BusinessLayer.Entities;
-using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,6 @@ namespace LogBook.BusinessLayer.Repositories
     internal class PersonRepository : BaseRepository<Person>
     {
         public override string TableName => "Person";
-        
 
     }
 }

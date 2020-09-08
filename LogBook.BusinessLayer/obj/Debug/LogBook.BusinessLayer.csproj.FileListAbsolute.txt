@@ -10,5 +10,3 @@ C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.Busi
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.dll
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.pdb
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\NLog.config
-C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\NLog.dll
-C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\NLog.xml
