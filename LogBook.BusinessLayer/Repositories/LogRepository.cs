@@ -12,10 +12,5 @@ namespace LogBook.BusinessLayer.Repositories
     {
         public override string TableName => "Logs";
 
-        public List<Logs> Select()
-        {
-            string sql = $"SELECT FirstName, LastName From {TableName}";
-            return Connection.Query<Logs>(sql).ToList();
-        }
     }
 }
