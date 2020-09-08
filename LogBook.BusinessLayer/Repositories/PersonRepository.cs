@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using LogBook.BusinessLayer.Entities;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace LogBook.BusinessLayer.Repositories
     internal class PersonRepository : BaseRepository<Person>
     {
         public override string TableName => "Person";
+        
 
         public List<Person> Select()
         {
@@ -27,9 +29,10 @@ namespace LogBook.BusinessLayer.Repositories
                 string sql = $"INSERT INTO { TableName } ({string.Join(",", columns)}); VALUES({string.Join(",", values)}); ";
                 return Connection.Execute(sql);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //logger
+                /*                Logger logger = LogManager.GetCurrentClassLogger();
+                                logger.ErrorException("The data are not succesfully save", ex);*/
                 return -1;
             }
         }

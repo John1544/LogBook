@@ -13,3 +13,4 @@ C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\Dapper.xml
 C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.csproj.CopyComplete
 C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.exe
 C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\obj\Debug\LogBook.WinForms.pdb
+C:\Users\johnv\source\repos\LogBook\LogBook.WinForms\bin\Debug\NLog.config
