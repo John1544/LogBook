@@ -33,8 +33,8 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.GetValue(data).ToString()).ToList();
+                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.Name).ToList();
+                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.GetValue(data).ToString()).ToList();
                 string sql = $"INSERT INTO { TableName } ({string.Join(",", columns)}); VALUES({string.Join(",", values)}); ";
                 return Connection.Execute(sql);
             }
@@ -49,9 +49,9 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.GetValue(data).ToString()).ToList();
-                string sql = $"UPDATE {TableName}.Id SET Id = ({string.Join(",", columns)}); WHERE ({string.Join(",", values)});";
+                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepositoryselectBaseRepository => selectBaseRepositoryselectBaseRepository.Name).ToList();
+                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepositoryselectBaseRepository => selectBaseRepositoryselectBaseRepository.GetValue(data).ToString()).ToList();
+                string sql = $"UPDATE {TableName} SET ({string.Join(",", columns)}); VALUES ({string.Join(",", values)}); WHERE Id = Id";
                 return Connection.Execute(sql);
             }
             catch (Exception)
@@ -64,9 +64,9 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(wherePerson => wherePerson.Name.ToLower() != "Id").Select(selectPerson => selectPerson.GetValue(data).ToString()).ToList();
-                string sql = $"Delete FROM {TableName}.Id WHERE Id = ({string.Join(",", columns)}); ({string.Join(",", values)});";
+                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.Name).ToList();
+                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.GetValue(data).ToString()).ToList();
+                string sql = $"Delete FROM {TableName} WHERE Id = ({string.Join(",", columns)}); ({string.Join(",", values)});";
                 return Connection.Execute(sql);
             }
             catch (Exception)
