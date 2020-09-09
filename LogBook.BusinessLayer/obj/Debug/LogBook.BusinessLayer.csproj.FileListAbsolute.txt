@@ -9,4 +9,3 @@ C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\Dapper.Contr
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csproj.CopyComplete
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.dll
 C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.pdb
-C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\bin\Debug\NLog.config
