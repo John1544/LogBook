@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using LogBook.BusinessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,6 +11,7 @@ using System.Threading.Tasks;
 namespace LogBook.BusinessLayer.Repositories
 {
     public abstract class BaseRepository<T> where T : class
+        //strictly for inheritance cannot create a obeject
     {
 
         public IDbConnection Connection { get; set; }
@@ -23,9 +23,9 @@ namespace LogBook.BusinessLayer.Repositories
             Connection = new SqlConnection(connectString);
         }
 
-        public List<T> Select()
+        public List<T> SelectAll()
         {
-            string sql = $"SELECT FirstName, LastName From {TableName}";
+            string sql = $"SELECT * FROM { TableName}";
             return Connection.Query<T>(sql).ToList();
         }
 
@@ -33,10 +33,12 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.GetValue(data).ToString()).ToList();
-                string sql = $"INSERT INTO { TableName } ({string.Join(",", columns)}); VALUES({string.Join(",", values)}); ";
+                //assignment where and select
+                List<string> columns = data.GetType().GetProperties().Where(k => k.Name.ToLower() != "Id").Select(a => a.Name).ToList();
+                List<string> values = data.GetType().GetProperties().Where(k => k.Name.ToLower() != "Id").Select(a => a.GetValue(data).ToString()).ToList();
+                string sql = $"INSERT INTO { TableName } ({string.Join(",", columns)}); VALUES ({string.Join(",", values)}); ";
                 return Connection.Execute(sql);
+                //return primary key
             }
             catch (Exception)
             {
@@ -49,10 +51,11 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepositoryselectBaseRepository => selectBaseRepositoryselectBaseRepository.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepositoryselectBaseRepository => selectBaseRepositoryselectBaseRepository.GetValue(data).ToString()).ToList();
+                List<string> columns = data.GetType().GetProperties().Where(k => k.Name.ToLower() != "Id").Select(a => a.Name).ToList();
+                List<string> values = data.GetType().GetProperties().Where(ka => ka.Name.ToLower() != "Id").Select(a => a.GetValue(data).ToString()).ToList();
                 string sql = $"UPDATE {TableName} SET ({string.Join(",", columns)}); = ({string.Join(",", values)}); WHERE Id = ({string.Join(",", values)});";
                 return Connection.Execute(sql);
+                //return number rows affected
             }
             catch (Exception)
             {
@@ -60,14 +63,14 @@ namespace LogBook.BusinessLayer.Repositories
                 return -1;
             }
         }
-        public int Delete(T data)
+        public int Delete(int id)
         {
             try
             {
-                List<string> columns = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.Name).ToList();
-                List<string> values = data.GetType().GetProperties().Where(whereBaseRepository => whereBaseRepository.Name.ToLower() != "Id").Select(selectBaseRepository => selectBaseRepository.GetValue(data).ToString()).ToList();
-                string sql = $"Delete FROM {TableName} WHERE Id = ({string.Join(",", values)});";
+                //array of Id's and will delete array will be use, one query to delete it all no for loop only one query
+                string sql = $"Delete FROM {TableName} WHERE Id = {id};";
                 return Connection.Execute(sql);
+
             }
             catch (Exception)
             {

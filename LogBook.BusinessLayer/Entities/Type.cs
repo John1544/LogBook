@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace LogBook.BusinessLayer.Entities
 {
-    public class Person
+    public class Type
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int TypeId { get; set; }
+        public string Name { get; set; }
     }
 }

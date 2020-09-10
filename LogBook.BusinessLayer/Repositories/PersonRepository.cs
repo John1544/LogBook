@@ -1,5 +1,4 @@
-﻿using Dapper;
-using LogBook.BusinessLayer.Entities;
+﻿using LogBook.BusinessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

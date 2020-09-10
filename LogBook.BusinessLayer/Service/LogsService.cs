@@ -10,6 +10,7 @@ namespace LogBook.BusinessLayer.Service
 {
     public class LogsService
     {
+        //task
         private LogRepository _selectLogs;
         private LogRepository _insertLogs;
         private LogRepository _updateLogs;
@@ -23,24 +24,24 @@ namespace LogBook.BusinessLayer.Service
             _deleteLogs = new LogRepository();
         }
 
-        public List<Logs> GetAllLogs()
+        public List<Logs> GetAll()
         {
-            return _selectLogs.Select().ToList();
+            return _selectLogs.SelectAll().ToList();
         }
 
-        public int PostLogs(Logs data)
+        public int Add(Logs data)
         {
-            return _insertLogs.Insert(data);
+            return _selectLogs.Insert(data);
         }
 
-        public int UpdateLogs(Logs data)
+        public int Update(Logs data)
         {
             return _updateLogs.Update(data);
         }
 
-        public int DeleteLogs(Logs data)
+        public int Delete(int id)
         {
-            return _deleteLogs.Delete(data);
+            return _deleteLogs.Delete(id);
         }
     }
 }

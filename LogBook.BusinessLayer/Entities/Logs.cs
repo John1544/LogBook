@@ -13,8 +13,8 @@ namespace LogBook.BusinessLayer.Entities
         public byte HasCough { get; set; }
         public byte HasSoreThroat { get; set; }
         public byte HasDiarrhea { get; set; }
-        public byte HasLostOfSmell { get; set; }
-        public byte HasLostOfTaste { get; set; }
+        public byte HasLossOfSmell { get; set; }
+        public byte HasLossOfTaste { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan TimeIn { get; set; }
         public string RecentTravels { get; set; }

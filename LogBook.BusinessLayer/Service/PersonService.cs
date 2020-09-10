@@ -25,7 +25,8 @@ namespace LogBook.BusinessLayer.Service
 
         public List<Person> GetAll()
         {
-            return _selectPerson.Select().ToList();
+            return _selectPerson.SelectAll().ToList();
+            return _selectPerson.SelectAll().ToList();
         }
 
         public int PostPerson(Person data)
@@ -38,9 +39,9 @@ namespace LogBook.BusinessLayer.Service
             return _updatePerson.Update(data);
         }
 
-        public int DeletePerson(Person data)
+        public int DeletePerson(int id)
         {
-            return _deletePerson.Delete(data);
+            return _deletePerson.Delete(id);
         }
     }
 }
