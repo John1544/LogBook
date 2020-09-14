@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -33,7 +34,7 @@ namespace LogBook.BusinessLayer.Repositories
         {
             try
             {
-                //assignment where and select
+                //where is to filter the the primary Id and filter the name then while GetProperties() into a list of string select is use to make it into list 
                 List<string> columns = data.GetType().GetProperties().Where(k => k.Name.ToLower() != "Id").Select(a => a.Name).ToList();
                 List<string> values = data.GetType().GetProperties().Where(k => k.Name.ToLower() != "Id").Select(a => a.GetValue(data).ToString()).ToList();
                 string sql = $"INSERT INTO { TableName } ({string.Join(",", columns)}); VALUES ({string.Join(",", values)}); ";
@@ -68,9 +69,8 @@ namespace LogBook.BusinessLayer.Repositories
             try
             {
                 //array of Id's and will delete array will be use, one query to delete it all no for loop only one query
-                string sql = $"Delete FROM {TableName} WHERE Id = {id};";
+                string[] sql = new string[]{ $"Delete FROM {TableName} WHERE Id = {id};"};
                 return Connection.Execute(sql);
-
             }
             catch (Exception)
             {

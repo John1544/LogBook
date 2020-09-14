@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5356B1B7-39FE-4DE0-A2C4-3881067299B1}</ProjectGuid>
+    <ProjectGuid>{680C906E-5497-45AF-BC37-D9AF4D45576B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>LogBook.WinForms</RootNamespace>
     <AssemblyName>LogBook.WinForms</AssemblyName>
@@ -78,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogBook.BusinessLayer\LogBook.BusinessLayer.csproj">
+      <Project>{ffaeba21-c140-4697-a61b-5b0749b6db0c}</Project>
+      <Name>LogBook.BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
