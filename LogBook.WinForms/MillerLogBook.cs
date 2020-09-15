@@ -21,7 +21,7 @@ namespace LogBook.WinForms
             InitializeComponent();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+/*        private void BtnSave_Click(object sender, EventArgs e)
         {
             personModel.FirstName = TxtFirstName.Text;
             personModel.LastName = TxtLastName.Text;
@@ -37,15 +37,15 @@ namespace LogBook.WinForms
             ClearText();
             LoadPersons();
             BtnCancel.Enabled = true;
-        }
+        }*/
 
         private void MillerLogBookForm_Load(object sender, EventArgs e)
         {
-            ClearText();
-            LoadPersons();
+/*            ClearText();
+            LoadPersons();*/
         }
 
-        private void ClearText()
+/*        private void ClearText()
         {
             TxtFirstName.Text = TxtLastName.Text = TxtLastName.Text = TxtLastName.Text = string.Empty;
             BtnSave.Text = "Save";
@@ -69,6 +69,6 @@ namespace LogBook.WinForms
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             ClearText();
-        }
+        }*/
     }
 }

@@ -69,7 +69,8 @@ namespace LogBook.BusinessLayer.Repositories
             try
             {
                 //array of Id's and will delete array will be use, one query to delete it all no for loop only one query
-                string[] sql = new string[]{ $"Delete FROM {TableName} WHERE Id = {id};"};
+                /*string[] sql = new string[]{ $"Delete FROM {TableName} WHERE Id = {id};"};*/
+                string sql = $"DELETE FROM {TableName} WHERE Id = {id};";
                 return Connection.Execute(sql);
             }
             catch (Exception)
