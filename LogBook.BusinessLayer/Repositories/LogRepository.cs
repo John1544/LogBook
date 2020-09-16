@@ -10,6 +10,5 @@ namespace LogBook.BusinessLayer.Repositories
     public class LogRepository : BaseRepository<Logs>
     {
         public override string TableName => "Logs";
-
     }
 }
