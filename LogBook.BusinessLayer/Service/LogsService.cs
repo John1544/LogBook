@@ -11,37 +11,33 @@ namespace LogBook.BusinessLayer.Service
     public class LogsService
     {
         //task
-        private LogRepository _selectLogs;
-        private LogRepository _insertLogs;
-        private LogRepository _updateLogs;
-        private LogRepository _deleteLogs;
+        private LogRepository _logQuery;
+
 
         public LogsService()
         {
-            _selectLogs = new LogRepository();
-            _insertLogs = new LogRepository();
-            _updateLogs = new LogRepository();
-            _deleteLogs = new LogRepository();
+            _logQuery = new LogRepository();
+
         }
 
         public List<Logs> GetAll()
         {
-            return _selectLogs.SelectAll().ToList();
+            return _logQuery.SelectAll().ToList();
         }
 
         public int Add(Logs data)
         {
-            return _selectLogs.Insert(data);
+            return _logQuery.Insert(data);
         }
 
         public int Update(Logs data)
         {
-            return _updateLogs.Update(data);
+            return _logQuery.Update(data);
         }
 
         public int Delete(int id)
         {
-            return _deleteLogs.Delete(id);
+            return _logQuery.Delete(id);
         }
     }
 }

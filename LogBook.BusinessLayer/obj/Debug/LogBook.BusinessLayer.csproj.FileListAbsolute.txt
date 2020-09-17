@@ -1,0 +1,2 @@
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\johnv\source\repos\LogBook\LogBook.BusinessLayer\obj\Debug\LogBook.BusinessLayer.csproj.CoreCompileInputs.cache
