@@ -28,7 +28,7 @@ namespace LogBook.BusinessLayer.Service
         {
             return _selectLogs.SelectAll().ToList();
         }
-
+            
         public int Add(Logs data)
         {
             return _selectLogs.Insert(data);

@@ -26,7 +26,7 @@ namespace LogBook.BusinessLayer.Repositories
 
         public List<T> SelectAll()
         {
-            string sql = $"SELECT * FROM { TableName}";
+            string sql = $"SELECT * FROM { TableName }";
             return Connection.Query<T>(sql).ToList();
         }
 
